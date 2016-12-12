@@ -3,9 +3,43 @@
 
 <head>
 
+
+
 </head>
 
+
+
 <body>
+
+<h1>El mantenedor del proyecto inicializa el repositorio oficial</h1>
+
+<p>
+
+Como en cualquier proyecto basado en Git, el primer paso es crear un repositorio oficial en un servidor accesible a todos los miembros del grupo.<br>
+Comunmente, este repositorio servirá como el repositorio público del mantenedor del proyecto.
+
+</p>
+
+<p>
+Por lo tanto, el mantenedor del proyecto debería escribir los siguientes comandos para crear el repositorio oficial:
+
+</p>
+
+<code>
+ssh user@host
+git init --bare /path/to/repo.git
+</code>
+
+<p>
+Alternativamente, Bitbucket ofrece un GUI interesante para los comandos de arriba. Esto es exactamente el mismo proceso de creación de un repositorio central para los otros workflows. El mantenedor debería también hacer push del código fuente existente en el repositorio, en caso necesario.
+</p>
+
+
+
+
+
+
+
 
 <footer>
 
