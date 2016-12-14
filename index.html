@@ -5,43 +5,101 @@
 
 
 
-</head>
+	<head>
+	<meta charset = "UTF-8">
+	<title>Git Forking Workflow Tutorial</title>
+	<link rel="shortcut icon" href="/home/horabaixa/Proyectos/ForkingHTML/HTML_Forking/icon.png" />
+	</head>
 
 
 
 <body>
+<header>
+		<h1 id="Inicio">Git Forking Workflow</h1>
+		<h2>¡Entiende cómo funciona!</h2>
+		<nav>
+			<a href="index.html">HTML</a>
+		</nav>
 
-<h1>El mantenedor del proyecto inicializa el repositorio oficial</h1>
+</header>
+
+<div id="cuerpo">
+	<p>La palabra fork se traduce al castellano, dentro del contexto que nos ocupa, como bifurcación. Cuando hacemos un fork de un repositorio, se hace una copia exacta en crudo  del repositorio original que podemos utilizar como un repositorio git cualquiera. Después de hacer fork tendremos dos repositorios git idénticos pero con distinta URL. Justo después de hacer el fork, estos dos repositorios tienen exactamente la misma historia, son una copia idéntica. Finalizado el proceso, tendremos dos repositorios independientes que pueden cada uno evolucionar de forma totalmente autónoma. De hecho, los cambios que se hacen el repositorio original NO se transmiten automáticamente a la copia. Esto tampoco ocurre a la inversa: las modificaciones que se hagan en la copia (fork) NO se transmiten automáticamente al repositorio original.</p>
+
+El usuario Patryk va a github, accede con su usuario y contraseña y abre la URL del repositorio original.
+<IMG SRC="0003.png"/>
+<p>
+En la página del repositorio, gusaljr, Teowv, ionoproxy  hacen  clic sobre el botón fork. Al hacer clic, Github va a crear un nuevo repositorio en su cuenta que es una copia del repositorio. </p>
+<IMG SRC="0004.png"/>
+
+<p>Cuando el proceso de forking termina (puede durar varios minutos si el repositorio que estamos bifurcando es muy grande)acaba en  la siguiente pantalla:</p>
+<IMG SRC="0005.png"/>
+
+	<p>Este repositorio es una copia del original (https://github.com/aprendegit/fork). Si comparáis la historia de los dos repositorios veréis que es idéntica.</p>
+<p>
+Este nuevo repositorio (https://github.com/PatrykBojar/HTML_Forking) es el que nuestro usuario gusaljr va a utilizar para trabajar y, cuando termine, enviarnos sus modificaciones.</p>
+
+	<p>La primera tarea que el usuario gusaljr  va a hacer como colaborador nuestro es modificar la página de inicio añadiendo nuestro logo. Para ello, clonará su fork y trabajará sobre él como si fuese un repositorio normal.<p>
+
+<p>Dado que el fork está en su cuenta, él es el propietario y como tal  podrá hacer push sin ningún problema. Recordad que al repositorio original (https://github.com/PatrykBojar/HTML_Forking) este usuario no puede hacer push.</p>
+<p>Al cabo de unos minutos,gusaljr  ha clonado su repositorio  (https://github.com/PatrykBojar/HTML_Forking)) en su máquina, ha añadido el logo y ha hecho un push a su fork:</p>
+<IMG SRC="0006.png"/>
+
+<p>A la vez que gusaljr ha avanzado con su tarea, nuestro primer usuario (Teowv) y administrador del repositorio original  (https://github.com/PatrykBojar/HTML_Forking), ha continuado también trabajando. A la vez que el usuario gusaljr ha cambiado la página de inicio,gusaljr ha añadido un nuevo campo a la clase Post de nuestro blog. Cuando aalbagarcia ha acabado su trabajo, lo sube al repositorio original (https://github.com/gusaljr/HTML_Forking) haciendo un push.</p>
+<IMG SRC="006.png"/>
+
+<IMG SRC="0007.png"/>
+</div>
+
+
+
+
+
+
 
 <p>
+El usuario Teowv hace un <code>git pull request</code> desde su máquina al usuario PatrykBojar para que incorpore sus cambios a la rama master del proyecto:
+<img src="capturaçao2.png"/>
 
-Como en cualquier proyecto basado en Git, el primer paso es crear un repositorio oficial en un servidor accesible a todos los miembros del grupo.<br>
-Comunmente, este repositorio servirá como el repositorio público del mantenedor del proyecto.
+
+
 
 </p>
 
+
 <p>
-Por lo tanto, el mantenedor del proyecto debería escribir los siguientes comandos para crear el repositorio oficial:
+Una vez PatrykBojar acepta el <code>git pull request</code> de Teowv, este hace un <code>git merge</code> con el proyecto, así se aplicarán los cambios que Teowv ha implementado:
+<img src="capturaçao3.png"/>
+
+
 
 </p>
 
-<code>
-ssh user@host
-git init --bare /path/to/repo.git
-</code>
 
 <p>
-Alternativamente, Bitbucket ofrece un GUI interesante para los comandos de arriba. Esto es exactamente el mismo proceso de creación de un repositorio central para los otros workflows. El mantenedor debería también hacer push del código fuente existente en el repositorio, en caso necesario.
+Llegado aquí, PatrykBojar puede hacer desde su consola un <code>git pull</code> al origin master (el repositorio de GitHub) para obtener la nueva versión del proyecto en su computadora:
+<img src="actualizamosElProyecto.png"/>
+
+<br>
+<br>
+
+<p>Esperamos que esta guía le haya sido útil para entender el concepto del Forking en GitHub.</p>
+
+<h2 style="text-align:center;">FIN</h2>
+
+
+
 </p>
-
-
-
 
 
 
 
 
 <footer>
+<p> Creado por: <a href="https://goo.gl/ONq1Es">Gustavo Baquerizo</a>, <a href="https://goo.gl/r21bSG">Patryk Bojar</a>,  <a href="https://goo.gl/OmUPnP">Teo Waelder</a>, <a href="https://goo.gl/ZWEjTa">Matías Beraldo</a>.<p>
+<p> Alumnos de 1ºGS de Informática en <a href="http://www.iessonferrer.net/">IES Son Ferrer</a>
+<p> Contacto: <a href="mailto:gusaljr6@gmail.com">gusaljr6@gmail.com</a> | <a href="mailto:	patrickbojar12344@gmail.com">patrickbojar12344@gmail.com</a> | 
+<a href="mailto:waeldwrvasquez@gmail.com">waeldwrvasquez@gmail.com</a> | <a href="mailto:matias.beraldo@gmail.com">matiasberaldo@gmail.com</a> </p>
 
 </footer>
 
